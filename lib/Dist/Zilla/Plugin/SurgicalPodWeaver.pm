@@ -30,7 +30,21 @@ You can forcefully disable PodWeaver on a .pm by using the C<-PodWeaver> hint
 use Moose;
 extends qw/ Dist::Zilla::Plugin::PodWeaver /;
 
-require Dist::Zilla::PluginBundle::ROKR;
+sub parse_hint {
+    my $self = shift;
+    my $content = shift;
+
+    my %hint;
+    if ( $content =~ m/^\s*#+\s*(?:Dist::Zilla):\s*(.+)$/m ) {
+        %hint = map {
+            m/^([\+\-])(.*)$/ ?
+                ( $1 eq '+' ? ( $2 => 1 ) : ( $2 => 0 ) ) :
+                ()
+        } split m/\s+/, $1;
+    }
+
+    return \%hint;
+}
 
 around munge_pod => sub {
     my $inner = shift;
@@ -39,7 +53,7 @@ around munge_pod => sub {
     my $content = $file->content;
 
     my $yes = 0;
-    if ( my $hint = Dist::Zilla::PluginBundle::ROKR->parse_hint( $content ) ) {
+    if ( my $hint = __PACKAGE__->parse_hint( $content ) ) {
         if ( exists $hint->{PodWeaver} ) {
             return unless $hint->{PodWeaver};
             $yes = 1;

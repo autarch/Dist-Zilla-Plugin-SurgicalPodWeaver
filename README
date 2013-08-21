@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::SurgicalPodWeaver - Surgically apply PodWeaver
 
 VERSION
-    version 0.0020
+    version 0.0021
 
 SYNOPSIS
     In your Dist::Zilla "dist.ini":
