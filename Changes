@@ -1,4 +1,6 @@
 {{$NEXT}}
+
+0.0022   2014-11-08
     - Add dependency on Dist::Zilla::Plugin::PodWeaver. RT #87624.
 
 0.0021 Wednesday August 21 16:41:23 PDT 2013:

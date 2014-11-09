@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::SurgicalPodWeaver - Surgically apply PodWeaver
 
 # VERSION
 
-version 0.002
+version 0.0022
 
 # SYNOPSIS
 
@@ -30,9 +30,10 @@ If either condition is satisfied, PodWeavering will be done.
 
 You can forcefully disable PodWeaver on a .pm by using the `-PodWeaver` hint
 
-# AUTHOR
+# AUTHORS
 
-Robert Krimen <robertkrimen@gmail.com>
+- Robert Krimen <robertkrimen@gmail.com>
+- Dave Rolsky <autarch@urth.org>
 
 # CONTRIBUTOR
 
