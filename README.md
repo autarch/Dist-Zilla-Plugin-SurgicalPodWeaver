@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::SurgicalPodWeaver - Surgically apply PodWeaver
 
 # VERSION
 
-version 0.0022
+version 0.0023
 
 # SYNOPSIS
 
