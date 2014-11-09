@@ -1,12 +1,12 @@
 {{$NEXT}}
-
+    
 0.0022   2014-11-08
     - Add dependency on Dist::Zilla::Plugin::PodWeaver. RT #87624.
 
-0.0021 Wednesday August 21 16:41:23 PDT 2013:
+0.0021   2013-08-21
     - Remove inadvertent dependency on ::ROKR
     - https://rt.cpan.org/Public/Bug/Display.html?id=87624
 
-0.0020 Friday July 26 19:23:23 PDT 2013:
+0.0020   2013-07-26
     - Initial release (from Dist::Zilla::PluginBundle::ROKR)
     - https://rt.cpan.org/Public/Bug/Display.html?id=87355
