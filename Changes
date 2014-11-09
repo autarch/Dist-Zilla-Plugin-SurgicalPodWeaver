@@ -1,4 +1,8 @@
 {{$NEXT}}
+
+* Fixes repo meta info to point to
+  https://github.com/autarch/Dist-Zilla-Plugin-SurgicalPodWeaver. RT #94476.
+
     
 0.0022   2014-11-08
 
