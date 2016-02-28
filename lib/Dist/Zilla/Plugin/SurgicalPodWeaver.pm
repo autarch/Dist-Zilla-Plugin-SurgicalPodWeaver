@@ -60,8 +60,7 @@ around munge_pod => sub {
         }
     }
 
-    if ( $yes || $content =~ m/^\s*#+\s*(?:ABSTRACT):\s*(.+)$/m ) { }
-    else { return }
+    return unless $yes || $content =~ m/^\s*#+\s*(?:ABSTRACT):\s*(.+)$/m;
 
     return $inner->( @_ )
 };
